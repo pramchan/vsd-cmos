@@ -21,17 +21,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 
 # -----------------------------
-# Install Sky130 PDK (pinned)
-# -----------------------------
-RUN python3 -m pip install --no-cache-dir --upgrade volare && \
-    mkdir -p "$PDK_ROOT" "$VOLARE_HOME" && \
-    volare enable --pdk sky130 ${SKY130_VER} && \
-    ln -s "${VOLARE_HOME}/sky130/${SKY130_VER}/pdk/sky130A" "${PDK_ROOT}/sky130A"
-
-ENV MAGIC_TECHPATH="$PDK_ROOT/sky130A/libs.tech/magic"
-ENV NETGEN_SETUP="$PDK_ROOT/sky130A/libs.tech/netgen/sky130A_setup.tcl"
-
-# -----------------------------
 # noVNC desktop environment
 # -----------------------------
 COPY supervisord.conf /etc/supervisor/conf.d/vnc.conf
