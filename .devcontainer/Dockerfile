@@ -19,16 +19,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
-# -----------------------------
-# Install NGSPICE
-# -----------------------------
-WORKDIR /tmp/build
-RUN git clone git://git.code.sf.net/p/ngspice/ngspice && \
-    cd ngspice && ./autogen.sh && mkdir release && cd release && \
-    ../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp && \
-    make -j$(nproc) && make install && \
-    cd / && rm -rf /tmp/build
-
 
 # -----------------------------
 # Install Sky130 PDK (pinned)
