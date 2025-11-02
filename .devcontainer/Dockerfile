@@ -1,10 +1,9 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV PDK_ROOT=/opt/pdk
-ENV VOLARE_HOME=/opt/volare
+
 ENV DISPLAY=:1
-ARG SKY130_VER=c6d73a35f524070e85faff4a6a9eef49553ebc2b
+
 
 # -----------------------------
 # System & build dependencies
