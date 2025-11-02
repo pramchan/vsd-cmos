@@ -79,8 +79,7 @@ ngspice day1_nfet_idvds_L2_W5.spice
 ![workspace layout](images/4.jpg)
 
 
-This opens an ngspice waveform window in the GUI (via noVNC).
-![ngspice simulation result](images/5.jpg)
+This opens an ngspice waveform window in the GUI (via noVNC) as shown in above image.
 
 You’ll see drain current vs. voltage characteristics plotted interactively — just as in a local desktop.
 
