@@ -28,6 +28,7 @@ exit
 
 You’ll see the ngspice version banner confirming installation.
 ![ngspice verification](images/2_1.jpg)
+
 If ngspice exits successfully, your setup is ready.
 
 
